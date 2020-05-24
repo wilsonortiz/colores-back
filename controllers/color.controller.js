@@ -2,6 +2,8 @@ const Color = require("../models/color.model");
 
 const getColores = (req, res) => {
 
+
+
   let page = req.query.page;
   let limit = req.query.limit;
 
@@ -11,12 +13,18 @@ const getColores = (req, res) => {
     limit,
     offset: offset
   }).then((result) => {
+
+    //Calcular total de páginas
     let total_paginas = 1
       if(result.count / limit > 1){
         total_paginas = Math.ceil(result.count / limit);
       }
+      // mapeamos la salida 
+      const resultMap = result.rows.map(color =>{ 
+        return {id :color.dataValues.id, name: color.dataValues.name, color: color.dataValues.color};
+      });
 
-      res.status(200).send({ total_elementos: result.count, pagina_actual : page, total_paginas: total_paginas,colores: result.rows });
+      res.status(200).send({ total_elementos: result.count, pagina_actual : page, total_paginas: total_paginas, colores: resultMap });
     })
     .catch((error) => {
       console.error(error);
