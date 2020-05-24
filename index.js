@@ -1,12 +1,4 @@
-
-const app = require('./app');
-
-
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Server up" });
-});
-
+const app = require("./config/app");
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
