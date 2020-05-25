@@ -2,10 +2,8 @@ const Color = require("../models/color.model");
 
 const getColores = (req, res) => {
 
-
-
-  let page = req.query.page;
-  let limit = req.query.limit;
+  let page = req.query.page || 1;
+  let limit = req.query.limit || 6;
 
   let offset = 0 + (page - 1) * limit
 
@@ -67,8 +65,7 @@ const saveColor = (req, res) => {
     pantone: req.body.pantone,
     year: req.body.year,
   }).then((color) => {
-    console.log(color);
-    res.status(200).send({ color: color });
+    res.status(201).send({ color: color });
   })
   .catch(error=>{
     console.error(error);
