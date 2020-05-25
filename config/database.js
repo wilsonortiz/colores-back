@@ -1,7 +1,9 @@
 const Sequelize = require('sequelize').Sequelize;
 require('dotenv').config({path: 'variables.env'})
 
-// Option 1: Passing parameters separately
+/**
+ * Genera la conexión a la base de datos
+ */
 const database = new Sequelize(process.env.BD_NOMBRE, process.env.BD_USER, process.env.BD_PASSWORD, {
   host: process.env.BD_HOST,
   port: process.env.BD_PORT,

@@ -2,6 +2,9 @@ const express = require('express');
 const colorCtrl = require("../controllers/color.controller");
 const api = express.Router();
 
+/**
+ * Endpoint para los metodos http
+ */
 api.get("/colores", colorCtrl.getColores);
 api.post("/color", colorCtrl.saveColor);
 api.get("/color/:id", colorCtrl.getColor);

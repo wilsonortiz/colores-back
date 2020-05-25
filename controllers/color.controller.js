@@ -1,5 +1,10 @@
 const Color = require("../models/color.model");
 
+/**
+ * Obtiene lista de colores 
+ * @param {*} req 
+ * @param {*} res 
+ */
 const getColores = (req, res) => {
 
   let page = req.query.page || 1;
@@ -30,6 +35,11 @@ const getColores = (req, res) => {
     });
 };
 
+/**
+ * Obtiene un color
+ * @param {*} req 
+ * @param {*} res 
+ */
 const getColor = (req, res) => {
   Color.findOne({
     where: {
@@ -58,6 +68,11 @@ const getColor = (req, res) => {
     });
 };
 
+/**
+ * Crea un color
+ * @param {*} req 
+ * @param {*} res 
+ */
 const saveColor = (req, res) => {
   Color.create({
     name: req.body.name,
@@ -77,6 +92,11 @@ const saveColor = (req, res) => {
   });
 };
 
+/**
+ * Actualiza un color
+ * @param {*} req 
+ * @param {*} res 
+ */
 const updateColor = (req, res) => {
   Color.findOne({
     where: {
@@ -104,6 +124,11 @@ const updateColor = (req, res) => {
   });
 };
 
+/**
+ * Elimina un color
+ * @param {*} req 
+ * @param {*} res 
+ */
 const deleteColor = (req, res) => {
   Color.destroy({
     where: {

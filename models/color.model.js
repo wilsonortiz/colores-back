@@ -1,8 +1,7 @@
 const { DataTypes } = require("sequelize").Sequelize;
 const database = require("../config/database");
 
-const Color = database.define(
-  "color",
+const Color = database.define("color",
   {
     name: {
       type: DataTypes.STRING,
@@ -21,8 +20,5 @@ const Color = database.define(
     freezeTableName: true,
   }
 );
-
-// `sequelize.define` also returns the model
-//console.log(Color === Sequelize.models.Color); // true
 
 module.exports = Color;
