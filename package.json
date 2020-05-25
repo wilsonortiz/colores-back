@@ -27,6 +27,7 @@
     "sequelize": "^5.21.10"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "mocha": "^7.2.0",
     "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
