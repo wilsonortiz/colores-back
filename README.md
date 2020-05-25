@@ -16,11 +16,11 @@ DELETE /color/:id -> Eliminar un color pasandole previamente un ID de color
 
 ## Tecnologías que utiliza
 
-Nodejs
-Express
-Sequelize
-Postgres
-Mocha
+- Nodejs
+- Express
+- Sequelize
+- Postgres
+- Mocha
 
 ## Instalar dependencias 
 
@@ -35,3 +35,6 @@ Es necesario tener node instalado:
 
 ## Documentación para el uso de la aplicación
 https://documenter.getpostman.com/view/6409697/Szt8fAqN?version=latest
+
+## Repositorio
+https://github.com/wilsonortiz/colores-back
