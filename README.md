@@ -30,6 +30,10 @@ Es necesario tener node instalado:
  - Levantar el servidor local con el comando `ng run dev`
  - Url local http://localhost:8080/api/
 
+ ## Test
+ 
+  - Ejecutar pruebas unitarias con el comando `npm test`
+
 ## Url de producción
  https://floating-bastion-44629.herokuapp.com/api/
 
